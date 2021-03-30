@@ -1,27 +1,11 @@
-# CfResolver
+use componentFActoryResolver, simple case.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+создать шаблон динамического компонента FormComponent. он принимает входной параметр и отображает его в шаблоне.
 
-## Development server
+прописать FormComponent в entryComponents.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+в шаблоне AppComponent создать элемент, в котором будет отрисовываться динамический компонент: <div #form></div>
 
-## Code scaffolding
+в AppComponent получить доступ к этому элементу, используя: ViewChild и ViewContainerRef
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+создать обработчик, в котором будет генерироваться динамический компонент и заполняться значением:
